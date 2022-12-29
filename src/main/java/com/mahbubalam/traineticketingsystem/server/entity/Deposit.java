@@ -8,6 +8,9 @@ public class Deposit {
         this.balance = balance;
     }
 
+    public Deposit() {
+    }
+
     public int getUserId() {
         return userId;
     }

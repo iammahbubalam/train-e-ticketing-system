@@ -1,34 +1,38 @@
 package com.mahbubalam.traineticketingsystem.server.entity;
 
-public class User {
-    private int userId;
+public class Admin {
+    private int adminId;
     private String firstName;
     private String lastName;
     private String email;
     private String phoneNo;
     private String nid;
     private String password;
-    private boolean isActive;
+    private String division;
+    private String district;
+    private String thana;
 
-    public User(String firstName, String lastName, String email, String phoneNo, String nid, String password, boolean isActive) {
+    public Admin(String firstName, String lastName, String email, String phoneNo, String nid, String password, String division, String district, String thana) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.phoneNo = phoneNo;
         this.nid = nid;
         this.password = password;
-        this.isActive = isActive;
+        this.division = division;
+        this.district = district;
+        this.thana = thana;
     }
 
-    public User() {
+    public Admin() {
     }
 
-    public int getUserId() {
-        return userId;
+    public int getAdminId() {
+        return adminId;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setAdminId(int adminId) {
+        this.adminId = adminId;
     }
 
     public String getFirstName() {
@@ -79,25 +83,43 @@ public class User {
         this.password = password;
     }
 
-    public boolean isActive() {
-        return isActive;
+    public String getDivision() {
+        return division;
     }
 
-    public void setActive(boolean active) {
-        isActive = active;
+    public void setDivision(String division) {
+        this.division = division;
+    }
+
+    public String getDistrict() {
+        return district;
+    }
+
+    public void setDistrict(String district) {
+        this.district = district;
+    }
+
+    public String getThana() {
+        return thana;
+    }
+
+    public void setThana(String thana) {
+        this.thana = thana;
     }
 
     @Override
     public String toString() {
-        return "User{" +
-                "userId=" + userId +
+        return "Admin{" +
+                "adminId=" + adminId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNo='" + phoneNo + '\'' +
                 ", nid='" + nid + '\'' +
                 ", password='" + password + '\'' +
-                ", isActive=" + isActive +
+                ", division='" + division + '\'' +
+                ", district='" + district + '\'' +
+                ", thana='" + thana + '\'' +
                 '}';
     }
 }
