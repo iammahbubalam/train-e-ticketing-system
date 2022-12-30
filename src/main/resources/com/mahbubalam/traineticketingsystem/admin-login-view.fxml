@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="903.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mahbubalam.traineticketingsystem.LoginController">
+   <children>
+      <JFXButton layoutX="43.0" layoutY="409.0" onAction="#onLoginButtonClick" text="Login as user" textFill="#ff0f0f" />
+      <Separator layoutX="2.0" layoutY="366.0" prefHeight="9.0" prefWidth="900.0" />
+      <Label layoutX="51.0" layoutY="392.0" textAlignment="CENTER" />
+      <Label layoutX="221.0" layoutY="153.0" text="Password:">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-password-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="511.0" layoutY="229.0" onAction="#onLoginButtonClick" prefHeight="40.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #A60000;" text="Login" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-enter-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Text fx:id="showWarning" fill="#d33737" layoutX="376.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="231.0" />
+      <TextField fx:id="emailOrPhoneInputField" layoutX="361.0" layoutY="74.0" prefHeight="35.0" prefWidth="260.0" />
+      <PasswordField fx:id="passwordInputField" layoutX="361.0" layoutY="148.0" prefHeight="35.0" prefWidth="260.0" />
+      <Label layoutX="221.0" layoutY="79.0" text="  Email     :">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-mail-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+   </children>
+</AnchorPane>

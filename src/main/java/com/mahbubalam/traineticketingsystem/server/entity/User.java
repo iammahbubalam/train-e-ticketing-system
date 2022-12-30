@@ -8,16 +8,22 @@ public class User {
     private String phoneNo;
     private String nid;
     private String password;
-    private boolean isActive;
 
-    public User(String firstName, String lastName, String email, String phoneNo, String nid, String password, boolean isActive) {
+    public User(String firstName, String lastName, String email, String phoneNo, String nid) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phoneNo = phoneNo;
+        this.nid = nid;
+    }
+
+    public User(String firstName, String lastName, String email, String phoneNo, String nid, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.phoneNo = phoneNo;
         this.nid = nid;
         this.password = password;
-        this.isActive = isActive;
     }
 
     public User() {
@@ -79,13 +85,6 @@ public class User {
         this.password = password;
     }
 
-    public boolean isActive() {
-        return isActive;
-    }
-
-    public void setActive(boolean active) {
-        isActive = active;
-    }
 
     @Override
     public String toString() {
@@ -97,7 +96,6 @@ public class User {
                 ", phoneNo='" + phoneNo + '\'' +
                 ", nid='" + nid + '\'' +
                 ", password='" + password + '\'' +
-                ", isActive=" + isActive +
                 '}';
     }
 }

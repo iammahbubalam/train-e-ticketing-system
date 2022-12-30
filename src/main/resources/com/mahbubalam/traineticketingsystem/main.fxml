@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="691.0" prefWidth="1018.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mahbubalam.traineticketingsystem.UserViewController">
+    <children>
+        <BorderPane fx:id="borderPane" prefHeight="691.0" prefWidth="1018.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <left>
+                <AnchorPane prefHeight="691.0" prefWidth="213.0" style="-fx-background-color: #A60000;" BorderPane.alignment="CENTER">
+                    <children>
+                        <JFXButton fx:id="userProfileButton" alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="16.0" layoutY="240.0" onAction="#onClickUserProfileButton" prefHeight="35.0" prefWidth="180.0" ripplerFill="WHITE" style="-fx-background-color: #FFFFFF;" text="Profile" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="requestBloodButton" alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="16.0" layoutY="296.0" onAction="#onClickBuyTicket" prefHeight="35.0" prefWidth="180.0" ripplerFill="#a60000" style="-fx-background-color: #FFFFFF;" text="Buy Ticket" textAlignment="RIGHT" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="14.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="donateBloodButton" alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="352.0" onAction="#onClickHistory" prefHeight="35.0" prefWidth="180.0" ripplerFill="#a60000" style="-fx-background-color: #FFFFFF;" text="History" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="logOutButton" alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="62.0" layoutY="613.0" onAction="#onClickLogOutButton" prefHeight="35.0" prefWidth="90.0" ripplerFill="#a60000" style="-fx-background-color: #FFFFFF;" text="Log Out!">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@img/logout_FILL0_wght400_GRAD0_opsz48.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="changePasswordButton" alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="15.0" layoutY="407.0" onAction="#onClickUserChangePasswordButton" prefHeight="35.0" prefWidth="180.0" ripplerFill="#a60000" style="-fx-background-color: #FFFFFF;" text="Change Password" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="15.0" layoutY="518.0" onAction="#onClickEditProfile" prefHeight="35.0" prefWidth="180.0" ripplerFill="#a60000" style="-fx-background-color: #FFFFFF;" text="Edit Profile" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </JFXButton>
+                        <Text fx:id="txt" layoutX="27.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="146.13671875" />
+                        <ImageView fitHeight="188.0" fitWidth="198.0" layoutX="7.0" layoutY="4.0" pickOnBounds="true">
+                            <image>
+                                <Image url="@img/BloodSource.png" />
+                            </image>
+                        </ImageView>
+                  <JFXButton alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="15.0" layoutY="461.0" onAction="#onClickAddMoney" prefHeight="35.0" prefWidth="180.0" ripplerFill="#a60000" style="-fx-background-color: #FFFFFF;" text="Add Money" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                    </children>
+                </AnchorPane>
+            </left>
+            <center>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="112.0" layoutY="186.0" text="Welcome to Blood Source">
+                            <font>
+                                <Font size="50.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="223.0" layoutY="281.0" text="Stay Fit and Eat Right and Donate Blood">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

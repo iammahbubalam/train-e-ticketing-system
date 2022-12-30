@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mahbubalam.traineticketingsystem.RegisterMenuController">
+    <children>
+        <TextField fx:id="firstNameTextField" layoutX="164.0" layoutY="45.0" onKeyReleased="#onKeyReleasedFirstNameTextField" prefHeight="20.0" prefWidth="200.0" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="164.0" />
+        <TextField fx:id="lastNameTextField" layoutX="164.0" layoutY="104.0" onKeyReleased="#onKeyReleasedLastNameTextField" prefHeight="25.0" prefWidth="200.0" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="536.0" />
+        <TextField fx:id="emailTextField" layoutX="164.0" layoutY="216.0" onKeyReleased="#onKeyReleaseEmailInputValidation" prefHeight="20.0" prefWidth="200.0" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="164.0" />
+        <TextField fx:id="mobileNumTextField" layoutX="164.0" layoutY="280.0" onKeyReleased="#onKeyReleaseMobileTextField" prefHeight="20.0" prefWidth="200.0" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="164.0" />
+        <Label layoutX="20.0" layoutY="48.0" text="First Name:" AnchorPane.leftAnchor="30.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="19.0" layoutY="107.0" text="Last Name:" AnchorPane.leftAnchor="30.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="30.0" layoutY="220.0" prefHeight="16.0" prefWidth="37.0" text="Email:" AnchorPane.leftAnchor="30.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="25.0" layoutY="283.0" text="Mobile:" AnchorPane.leftAnchor="30.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <PasswordField fx:id="passwordField" layoutX="683.0" layoutY="165.0" prefHeight="20.0" prefWidth="200.0" style="-fx-background-radius: 20;" AnchorPane.rightAnchor="70.0" />
+        <Label layoutX="481.0" layoutY="168.0" text="Password:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Text fx:id="firstNameWarning" fill="#d33737" layoutX="166.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="200.0" AnchorPane.leftAnchor="164.0" />
+        <Text fx:id="lastNameWarning" fill="#d33737" layoutX="164.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="200.0" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="536.0" />
+        <Text fx:id="nidWarning" fill="#d33737" layoutX="164.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="200.0" AnchorPane.leftAnchor="164.0" />
+        <Separator layoutY="363.0" opacity="0.5" prefHeight="17.0" prefWidth="900.0" />
+        <JFXButton fx:id="registerButton" buttonType="RAISED" layoutX="763.0" layoutY="388.0" onAction="#onClickRegisterButton" prefHeight="40.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #A60000;" text="Register" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </JFXButton>
+        <Text fx:id="emailWarning" fill="#d33737" layoutX="164.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="200.0" AnchorPane.leftAnchor="164.0" />
+        <Text fx:id="mobileWarning" fill="#d33737" layoutX="164.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="200.0" AnchorPane.leftAnchor="164.0" />
+        <Text fx:id="passwordWarning" fill="#d33737" layoutX="683.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="200.0" AnchorPane.rightAnchor="70.0" />
+        <Text fx:id="addressWarning" fill="#d33737" layoutX="240.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="200.0" />
+        <JFXButton layoutX="22.0" layoutY="408.0" onAction="#onLoginButtonClick" prefHeight="25.0" prefWidth="166.0" text="Log in" textFill="#ff0f0f" />
+        <Label layoutX="48.0" layoutY="391.0" text="Already have an account?" textAlignment="CENTER" />
+        <TextField fx:id="nidTextField" layoutX="164.0" layoutY="156.0" onKeyReleased="#onKeyReleasedFirstNameTextField" prefHeight="20.0" prefWidth="200.0" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="164.0" />
+        <Label layoutX="25.0" layoutY="159.0" text="NID:" AnchorPane.leftAnchor="30.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <PasswordField fx:id="confirmPasswordField" layoutX="631.0" layoutY="247.0" prefHeight="20.0" prefWidth="200.0" style="-fx-background-radius: 20;" />
+        <Label layoutX="477.0" layoutY="249.0" text="Confirm Password">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Text fx:id="confirmPasswordWarning" fill="#d33737" layoutX="631.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="200.0" />
+    </children>
+</AnchorPane>
