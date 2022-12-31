@@ -1,9 +1,7 @@
 package com.mahbubalam.traineticketingsystem;
 
 import com.jfoenix.controls.JFXButton;
-import com.mahbubalam.traineticketingsystem.server.controller.BalanceController;
-import com.mahbubalam.traineticketingsystem.server.controller.StationController;
-import com.mahbubalam.traineticketingsystem.server.controller.UserController;
+import com.mahbubalam.traineticketingsystem.server.controller.*;
 import com.mahbubalam.traineticketingsystem.server.provider.SendEmail;
 import com.mahbubalam.traineticketingsystem.singletron.User;
 import javafx.event.ActionEvent;
@@ -29,7 +27,7 @@ public class BuyTicketView  implements Initializable {
     public ComboBox<String> stationComboBoxTo;
     public TextArea Details;
 
-    int fromStationId;
+    int fromStationId , routId;
     int toStationId;
     float fr, t,distance;
     String[] stations;
@@ -43,7 +41,8 @@ public class BuyTicketView  implements Initializable {
     public void confirm(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
         if (balance>=price){
             BalanceController.updateBalance(User.getInstance().getUserId(), balance-price);
-                SendEmail.sendEmail(massage,User.getInstance().getUserEmail());
+            SendEmail.sendEmail(massage,User.getInstance().getUserEmail());
+            TransactionController.addTransaction(fromStationId,toStationId,User.getInstance().getUserId(), price,Integer.parseInt(count.getText()),routId);
                 warning.setText("Ticket Sent to your mail");
                 count.setText("");
                 route.setText("");
@@ -71,6 +70,7 @@ public class BuyTicketView  implements Initializable {
         Details.setText(massage);
         price=(distance*10)*Integer.parseInt(count.getText());
         balance= BalanceController.getBalance(User.getInstance().getUserId());
+        routId= RouteController.getRouteId(route.getText());
     }
 
     @Override

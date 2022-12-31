@@ -42,4 +42,12 @@ public class TransactionController {
         }
         return list;
     }
+    public static void addTransaction(int fromId , int toId,int userId,float price,int tCount,int routeId ) throws ClassNotFoundException, SQLException {
+String s = "insert  into  transaction(from_station_id, to_station_id, user_id, price ,ticket_count,route_id)   values('"+fromId+"','"+toId+"','"+userId+"','"+price+"','"+tCount+"','"+routeId+"');";
+
+        Connection connection = ConnectionProvider.createConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(s);
+         preparedStatement.execute();
+
+    }
 }
