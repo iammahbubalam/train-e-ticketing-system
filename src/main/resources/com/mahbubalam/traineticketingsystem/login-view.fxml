@@ -14,25 +14,25 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="900.0" style="-fx-background-color: #A60000;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mahbubalam.traineticketingsystem.LoginController">
    <children>
-      <BorderPane fx:id="borderPane" prefHeight="770.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane fx:id="borderPane" prefHeight="745.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <AnchorPane prefHeight="273.0" prefWidth="903.0" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="295.0" fitWidth="319.0" layoutX="305.0" layoutY="14.0" pickOnBounds="true">
+                  <ImageView fitHeight="295.0" fitWidth="319.0" layoutX="292.0" layoutY="14.0" pickOnBounds="true">
                      <image>
-                        <Image url="@img/BloodSource.png" />
+                        <Image url="@img/Green%20Modern%20House%20Real%20Estate%20Logo.png" />
                      </image>
                   </ImageView>
                </children>
             </AnchorPane>
          </top>
          <bottom>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="903.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="903.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
                <children>
-                  <JFXButton layoutX="723.0" layoutY="409.0" onAction="#onClickForgatePassword" prefHeight="25.0" prefWidth="166.0" ripplerFill="WHITE" text="Forget Password?" textFill="#ff0f0f" />
-                  <JFXButton layoutX="43.0" layoutY="409.0" onAction="#onRegisterButtonClick" text="Register with us!" textFill="#ff0f0f" />
+                  <JFXButton layoutX="723.0" layoutY="385.0" onAction="#onClickForgatePassword" prefHeight="25.0" prefWidth="166.0" ripplerFill="WHITE" text="Forget Password?" textFill="#ff0f0f" />
+                  <JFXButton layoutX="43.0" layoutY="397.0" onAction="#onRegisterButtonClick" text="Register with us!" textFill="#ff0f0f" />
                   <Separator layoutX="2.0" layoutY="366.0" prefHeight="9.0" prefWidth="900.0" />
-                  <Label layoutX="51.0" layoutY="392.0" text="Don't have an account?" textAlignment="CENTER" />
+                  <Label layoutX="43.0" layoutY="375.0" text="Don't have an account?" textAlignment="CENTER" />
                   <Label layoutX="221.0" layoutY="153.0" text="Password:" AnchorPane.leftAnchor="221.0">
                      <font>
                         <Font size="16.0" />
@@ -45,7 +45,7 @@
                         </ImageView>
                      </graphic>
                   </Label>
-                  <JFXButton buttonType="RAISED" layoutX="511.0" layoutY="229.0" onAction="#onLoginButtonClick" prefHeight="40.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #A60000;" text="Login" textAlignment="CENTER" textFill="WHITE">
+                  <JFXButton buttonType="RAISED" layoutX="511.0" layoutY="229.0" onAction="#onLoginButtonClick" prefHeight="40.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #70EFDE;" text="Login" textAlignment="CENTER">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -60,7 +60,7 @@
                   <Text fx:id="showWarning" fill="#d33737" layoutX="376.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="231.0" />
                   <TextField fx:id="emailOrPhoneInputField" layoutX="361.0" layoutY="74.0" prefHeight="35.0" prefWidth="260.0" />
                   <PasswordField fx:id="passwordInputField" layoutX="361.0" layoutY="148.0" prefHeight="35.0" prefWidth="260.0" />
-                  <Label layoutX="221.0" layoutY="79.0" text="Mobile:" AnchorPane.leftAnchor="221.0">
+                  <Label layoutX="221.0" layoutY="79.0" text="Mobile/Email:" AnchorPane.leftAnchor="221.0">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -72,7 +72,7 @@
                         </ImageView>
                      </graphic>
                   </Label>
-                  <JFXButton layoutX="361.0" layoutY="409.0" onAction="#onLoginAsAdminClick" text="Login as admin" textFill="#ff0f0f" />
+                  <JFXButton layoutX="376.0" layoutY="385.0" onAction="#onLoginAsAdminClick" text="Login as admin" textFill="#ff0f0f" />
                </children>
             </AnchorPane>
          </bottom>

@@ -22,9 +22,9 @@ public class ChangePasswordController {
 
     public void onClickChangePassword(ActionEvent event) throws SQLException, ClassNotFoundException {
         if (check()) {
-            if (AuthenticationController.isAuthentic(User.getInstance().getUserPhoneNo(), oldPasswordField.getText())) {
+            if (AuthenticationController.isAuthentic(User.getInstance().getUserId(), oldPasswordField.getText())) {
                 if (Objects.equals(newPasswordField.getText(), confirmPasswordField.getText())) {
-                    boolean f = AuthenticationController.changePassword(User.getInstance().getUserPhoneNo(), newPasswordField.getText());
+                    boolean f = AuthenticationController.changePassword(User.getInstance().getUserId(), newPasswordField.getText());
                     if (f) {
                         warning.setText("password upgraded");
                         oldPasswordField.setText("");

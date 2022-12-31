@@ -1,5 +1,6 @@
 package com.mahbubalam.traineticketingsystem;
 
+import com.mahbubalam.traineticketingsystem.server.controller.BalanceController;
 import com.mahbubalam.traineticketingsystem.server.controller.UserController;
 import com.mahbubalam.traineticketingsystem.server.entity.User;
 import com.mahbubalam.traineticketingsystem.server.provider.SendEmail;
@@ -153,6 +154,8 @@ public class RegisterMenuController {
             try {
                 UserController.saveUser(user);
                 com.mahbubalam.traineticketingsystem.singletron.User.getInstance().setUserEmail(user.getEmail());
+                int a = UserController.getUserId(user.getEmail());
+                BalanceController.setBalance(a);
                 nextPage("login-view.fxml", event);
             } catch (SQLException | ClassNotFoundException | IOException e) {
                 throw new RuntimeException(e);

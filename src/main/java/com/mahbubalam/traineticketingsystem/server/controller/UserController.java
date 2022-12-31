@@ -46,7 +46,7 @@ public class UserController {
 
     public static User getUserById(int id) throws SQLException, ClassNotFoundException {
 
-        String quarry = "SELECT  * FROM user WHERE id='"+id+"';";
+        String quarry = "SELECT  * FROM user WHERE user_id="+id+";";
         return getUser(quarry);
     }
 
@@ -76,13 +76,21 @@ public class UserController {
         return user ;
 
     }
+    public static float getBalance(int userId) throws SQLException, ClassNotFoundException {
+        float balance = 0;
+        String query ="select balance FROM deposite  WHERE user_id = "+ userId+";";
+        Connection connection = ConnectionProvider.createConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        while (resultSet.next()) {
+            balance=resultSet.getInt("balance");
+        }
+        return balance;
+    }
 
     public static int getTotalDistanceTraveled(int id) throws SQLException, ClassNotFoundException {
         int distance = 0;
-        String query ="SELECT  SUM(ABS((st1.distance_from_start - st2.distance_from_start))) AS total_distance FROM \n" +
-                "stations st1 JOIN transaction tr ON st1.station_id=tr.from_station_id\n" +
-                "JOIN stations st2 on tr.to_station_id=st2.station_id\n" +
-                "WHERE tr.user_id="+id+";";
+        String query ="SELECT  SUM(ABS((st1.distance_from_start - st2.distance_from_start))) AS total_distance FROM stations st1 JOIN transaction tr ON st1.station_id=tr.from_station_id JOIN stations st2 on tr.to_station_id=st2.station_id WHERE tr.user_id="+id+";";
         Connection connection = ConnectionProvider.createConnection();
         PreparedStatement preparedStatement = connection.prepareStatement(query);
         ResultSet resultSet = preparedStatement.executeQuery();
@@ -90,6 +98,20 @@ public class UserController {
             distance=resultSet.getInt("total_distance");
         }
         return distance;
+    }
+
+    public static int getUserId(String email) throws SQLException, ClassNotFoundException {
+        int id=0;
+        String quarry = "SELECT  user_id FROM user WHERE user.email='" + email + "';";
+
+        Connection connection = ConnectionProvider.createConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(quarry);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        while (resultSet.next()) {
+            id = resultSet.getInt("user_id");
+        }
+        return id;
+
     }
 }
 

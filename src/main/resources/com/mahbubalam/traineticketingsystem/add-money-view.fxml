@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mahbubalam.traineticketingsystem.AddMoneyController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="810.0" style="-fx-background-color: #70EFDE;" text="Add Money">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Label>
+      <TextField fx:id="amountFild" layoutX="359.0" layoutY="138.0" prefHeight="35.0" prefWidth="215.0" AnchorPane.leftAnchor="359.0" AnchorPane.rightAnchor="187.0" />
+      <Label layoutX="178.0" layoutY="143.0" text="Amount" AnchorPane.leftAnchor="178.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="172.0" layoutY="202.0" text="Confirm Password" AnchorPane.leftAnchor="178.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="saveButton" alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="321.0" layoutY="380.0" onAction="#confirm" prefHeight="35.0" prefWidth="150.0" ripplerFill="#70efde" style="-fx-background-color: #70EFDE;" text="Confirm">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Text fx:id="warning" layoutX="286.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="247.13671875" />
+      <PasswordField fx:id="passwordInputField" layoutX="359.0" layoutY="197.0" prefHeight="35.0" prefWidth="215.0" />
+   </children>
+</AnchorPane>

@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="678.0" prefWidth="783.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mahbubalam.traineticketingsystem.ProfileController">
+<AnchorPane prefHeight="600.0" prefWidth="810.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mahbubalam.traineticketingsystem.ProfileController">
     <children>
-        <Label layoutX="71.0" layoutY="225.0" prefHeight="27.0" prefWidth="112.0" text="Balance" AnchorPane.leftAnchor="71.0">
+        <Label layoutX="71.0" layoutY="225.0" prefHeight="27.0" prefWidth="112.0" text="Balance :" AnchorPane.leftAnchor="71.0">
             <font>
                 <Font size="18.0" />
             </font>
         </Label>
-        <Label layoutX="71.0" layoutY="180.0" prefHeight="27.0" prefWidth="112.0" text="NID" AnchorPane.leftAnchor="71.0">
+        <Label layoutX="71.0" layoutY="180.0" prefHeight="27.0" prefWidth="112.0" text="NID :" AnchorPane.leftAnchor="71.0">
             <font>
                 <Font size="18.0" />
             </font>
@@ -42,7 +41,7 @@
                 <Font size="18.0" />
             </font>
         </Label>
-        <Label layoutX="71.0" layoutY="271.0" prefHeight="27.0" prefWidth="120.0" text="Total Traveled" AnchorPane.leftAnchor="71.0">
+        <Label layoutX="71.0" layoutY="271.0" prefHeight="27.0" prefWidth="126.0" text="Total Traveled :" AnchorPane.leftAnchor="71.0">
             <font>
                 <Font size="18.0" />
             </font>
@@ -72,14 +71,14 @@
                 <Font size="18.0" />
             </font>
         </Label>
-        <JFXButton buttonType="RAISED" layoutX="68.0" layoutY="411.0" onAction="#onAddressClick" prefHeight="27.0" prefWidth="95.0" ripplerFill="WHITE" style="-fx-background-color: #A60000;" text="Address" textAlignment="CENTER" textFill="WHITE">
-            <font>
-                <Font size="16.0" />
-            </font>
-        </JFXButton>
-      <Label fx:id="name1" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" layoutX="269.0" layoutY="62.0" prefHeight="27.0" prefWidth="229.0" style="-fx-background-color: #00B3A6;" text="Profile Details" textAlignment="CENTER">
+      <Label fx:id="name1" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" prefHeight="80.0" prefWidth="810.0" style="-fx-background-color: #70EFDE;" text="Profile Details" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="29.0" />
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="408.0" prefHeight="27.0" prefWidth="112.0" text="Address:">
+         <font>
+            <Font size="18.0" />
          </font>
       </Label>
     </children>

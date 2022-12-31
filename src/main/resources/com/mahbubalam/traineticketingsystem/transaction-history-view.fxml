@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="614.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mahbubalam.traineticketingsystem.UserTransactionHistory">
+   <children>
+      <TableView fx:id="tableView" editable="true" layoutX="14.0" layoutY="1.0" onMouseClicked="#omMouseClick" prefHeight="600.0" prefWidth="810.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columns>
+            <TableColumn fx:id="from" prefWidth="194.0" text="From" />
+            <TableColumn fx:id="to" prefWidth="205.0" text="To" />
+            <TableColumn fx:id="distance" prefWidth="135.0" text="Distance" />
+            <TableColumn fx:id="ticketCount" prefWidth="125.0" text="Ticket Count" />
+            <TableColumn fx:id="price" prefWidth="138.0" text="Price" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

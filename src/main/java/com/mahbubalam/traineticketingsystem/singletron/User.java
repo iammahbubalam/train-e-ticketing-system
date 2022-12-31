@@ -6,6 +6,15 @@ public class User {
     private int userId;
     private String userEmail;
     private String userPhoneNo;
+    private String routeName;
+
+    public String getRouteName() {
+        return routeName;
+    }
+
+    public void setRouteName(String routeName) {
+        this.routeName = routeName;
+    }
 
     public static User getInstance() {
         return instance;

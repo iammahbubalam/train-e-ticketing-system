@@ -1,19 +1,16 @@
 package com.mahbubalam.traineticketingsystem;
 
 
+import com.mahbubalam.traineticketingsystem.server.controller.AddressController;
 import com.mahbubalam.traineticketingsystem.server.controller.UserController;
 import com.mahbubalam.traineticketingsystem.server.entity.Address;
 import com.mahbubalam.traineticketingsystem.singletron.User;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
-import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
@@ -31,7 +28,9 @@ public class ProfileController implements Initializable {
 
     User user1 = User.getInstance();
     com.mahbubalam.traineticketingsystem.server.entity.User  user;
-    Address personAddress;
+    Address personAddress=null;
+    int distance;
+    float totalBalance;
 
 
 
@@ -40,6 +39,11 @@ public class ProfileController implements Initializable {
 
         try {
             user = UserController.getUserById(user1.getUserId());
+            distance = UserController.getTotalDistanceTraveled(user1.getUserId());
+            totalBalance = UserController.getBalance(user1.getUserId());
+            if (AddressController.isExistAddress(user1.getUserId()))
+                personAddress = AddressController.getAddressById(user1.getUserId());
+
 
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
@@ -47,33 +51,17 @@ public class ProfileController implements Initializable {
         name.setText(user.getFirstName() + " " + user.getLastName());
         nid.setText(user.getNid());
         email.setText(user.getEmail());
+        traveled.setText(distance+"");
+        balance.setText(totalBalance+"");
         mobileNum.setText(user.getPhoneNo());
+        if (personAddress!=null)
+         address.setText( personAddress.getDivision() + ", " + personAddress.getDistrict() + ", " + personAddress.getThana() + ".");
+        else address.setText("No address Found");
 
 
     }
 
-    public void onAddressClick(ActionEvent event) {
-        try {
-            personAddress = AddressController.getAddressById(person.getAddressId());
-        } catch (SQLException | ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-        address.setText(personAddress.getCountry() + ", " + personAddress.getDivision() + ", " + personAddress.getDistrict() + ", " + personAddress.getSubDistrict() + ".");
 
-    }
 
-    public void donationData(ActionEvent event) throws SQLException, ClassNotFoundException {
-        hospitalColumn.setCellValueFactory(new PropertyValueFactory<>("hospitalName"));
-        dateColumn.setCellValueFactory(new PropertyValueFactory<>("donationDate"));
-        donationObservableList=DonationController.getDonatedDonationById(User.getInstance().getUserId());
-        table.setItems(donationObservableList);
-    }
 
-    public void receivedData(ActionEvent event) throws SQLException, ClassNotFoundException {
-        hospitalColumn.setCellValueFactory(new PropertyValueFactory<>("hospitalName"));
-        dateColumn.setCellValueFactory(new PropertyValueFactory<>("donationDate"));
-        donationObservableList=DonationController.getReceivedDonationById(User.getInstance().getUserId());
-        table.setItems(donationObservableList);
-
-    }
 }

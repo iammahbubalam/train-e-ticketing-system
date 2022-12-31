@@ -37,7 +37,7 @@ public class ForgetPasswordController implements Initializable {
         nextPage("login-view.fxml", event);
     }
 
-    public void onClickChangePassword(ActionEvent event) throws IOException {
+    public void onClickChangePassword(ActionEvent event) throws IOException, SQLException, ClassNotFoundException {
         String np = newPassWordField.getText();
         String cp = confirmPasswordField.getText();
         if (np.equals(cp)) {
@@ -94,10 +94,13 @@ public class ForgetPasswordController implements Initializable {
                 }
             } else {
                 try {
-                    mail = UserController.getEmailByPhoneNo(emailOrPhone);
+
                     isExist = AuthenticationController.isExistPhone(emailOrPhone);
                     if (!isExist) warning.setText("No user found with this phone");
-                    else sendVerificationCode(mail) ;
+                    else{
+                        mail = UserController.getEmailByPhoneNo(emailOrPhone);
+                        sendVerificationCode(mail) ;
+                    }
                 } catch (ClassNotFoundException | SQLException e) {
                     throw new RuntimeException(e);
                 }

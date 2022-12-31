@@ -1,7 +1,6 @@
 package com.mahbubalam.traineticketingsystem.server.entity;
 
 public class Address {
-    private int addressId;
     private int userId;
     private String division;
     private String district;
@@ -17,12 +16,10 @@ public class Address {
     public Address() {
     }
 
-    public int getAddressId() {
-        return addressId;
-    }
-
-    public void setAddressId(int addressId) {
-        this.addressId = addressId;
+    public Address(String division, String district, String thana) {
+        this.division = division;
+        this.district = district;
+        this.thana = thana;
     }
 
     public int getUserId() {
@@ -60,7 +57,6 @@ public class Address {
     @Override
     public String toString() {
         return "Address{" +
-                "addressId=" + addressId +
                 ", userId=" + userId +
                 ", division='" + division + '\'' +
                 ", district='" + district + '\'' +

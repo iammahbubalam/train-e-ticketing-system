@@ -98,25 +98,27 @@ public class AuthenticationController {
 
 
 
-    public static boolean isAuthentic(String phone, String password) throws ClassNotFoundException, SQLException {
+    public static boolean isAuthentic(int userID, String password) throws ClassNotFoundException, SQLException {
         String pas = null;
-        String phoneNO = null;
         Connection connection = ConnectionProvider.createConnection();
-        String addressQuarry = "select user.phone_no user.email  from user where  phone_no =" + phone + ";";
+        String addressQuarry = "select user.password  from user where  user_id = " + userID + ";";
         PreparedStatement preparedStatement = connection.prepareStatement(addressQuarry);
         preparedStatement.executeQuery();
         ResultSet resultSet = preparedStatement.executeQuery();
         while (resultSet.next()) {
-            phoneNO = resultSet.getString("phone_no");
             pas = resultSet.getString("password");
         }
         System.out.println(pas);
-        System.out.println(phoneNO);
 
 
-        return password.equals(pas) && phone.equals(phoneNO);
+        return password.equals(pas) ;
     }
 
+    public static boolean changePassword(int userID, String password) throws ClassNotFoundException, SQLException {
+
+            return PasswordController.updatePassword(userID, password);
+
+    }
     public static boolean changePassword(String phone, String password) throws ClassNotFoundException, SQLException {
         if (isExistPhone(phone)) {
             return PasswordController.updatePassword(phone, password);

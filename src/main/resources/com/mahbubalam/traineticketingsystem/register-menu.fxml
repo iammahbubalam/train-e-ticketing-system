@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mahbubalam.traineticketingsystem.RegisterMenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mahbubalam.traineticketingsystem.RegisterMenuController">
     <children>
         <TextField fx:id="firstNameTextField" layoutX="164.0" layoutY="45.0" onKeyReleased="#onKeyReleasedFirstNameTextField" prefHeight="20.0" prefWidth="200.0" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="164.0" />
         <TextField fx:id="lastNameTextField" layoutX="164.0" layoutY="104.0" onKeyReleased="#onKeyReleasedLastNameTextField" prefHeight="25.0" prefWidth="200.0" style="-fx-background-radius: 20;" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="536.0" />
@@ -45,7 +45,7 @@
         <Text fx:id="lastNameWarning" fill="#d33737" layoutX="164.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="200.0" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="536.0" />
         <Text fx:id="nidWarning" fill="#d33737" layoutX="164.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="200.0" AnchorPane.leftAnchor="164.0" />
         <Separator layoutY="363.0" opacity="0.5" prefHeight="17.0" prefWidth="900.0" />
-        <JFXButton fx:id="registerButton" buttonType="RAISED" layoutX="763.0" layoutY="388.0" onAction="#onClickRegisterButton" prefHeight="40.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #A60000;" text="Register" textAlignment="CENTER" textFill="WHITE">
+        <JFXButton fx:id="registerButton" buttonType="RAISED" layoutX="763.0" layoutY="388.0" onAction="#onClickRegisterButton" prefHeight="40.0" prefWidth="100.0" ripplerFill="WHITE" style="-fx-background-color: #70EFDE;" text="Register" textAlignment="CENTER">
             <font>
                 <Font size="16.0" />
             </font>

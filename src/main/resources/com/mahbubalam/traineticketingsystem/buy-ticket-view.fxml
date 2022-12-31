@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mahbubalam.traineticketingsystem.BuyTicketView">
+   <children>
+      <Label alignment="CENTER" prefHeight="80.0" prefWidth="812.0" style="-fx-background-color: #70EFDE;" text="Buy Ticket" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Label>
+      <TextField fx:id="route" layoutX="131.0" layoutY="122.0" onMouseClicked="#onClick" prefHeight="35.0" prefWidth="182.0" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="489.0" />
+      <Label layoutX="43.0" layoutY="127.0" text="Route :" AnchorPane.leftAnchor="43.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="239.0" text="To :" AnchorPane.leftAnchor="43.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="186.0" text="From :" AnchorPane.leftAnchor="43.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="count" layoutX="131.0" layoutY="289.0" prefHeight="35.0" prefWidth="182.0" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="489.0" />
+      <Label layoutX="43.0" layoutY="294.0" text="Count :" AnchorPane.leftAnchor="43.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="saveButton" alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="562.0" layoutY="445.0" onAction="#confirm" prefHeight="35.0" prefWidth="150.0" ripplerFill="#a60000" style="-fx-background-color: #70EFDE;" text="Confirm">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="saveButton1" alignment="TOP_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="88.0" layoutY="373.0" onAction="#buy" prefHeight="35.0" prefWidth="150.0" ripplerFill="#a60000" style="-fx-background-color: #70EFDE;" text="Buy">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Text fx:id="warning" layoutX="222.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="247.13671875" />
+      <ComboBox fx:id="stationComboBoxFrom" editable="true" layoutX="131.0" layoutY="186.0" onAction="#onClickFrom" prefHeight="25.0" prefWidth="182.0" promptText="Select Rout" />
+      <ComboBox fx:id="stationComboBoxTo" editable="true" layoutX="131.0" layoutY="240.0" onAction="#onClickTo" prefHeight="25.0" prefWidth="182.0" promptText="Select Rout" />
+      <TextArea fx:id="Details" layoutX="515.0" layoutY="97.0" prefHeight="286.0" prefWidth="259.0" />
+   </children>
+</AnchorPane>
